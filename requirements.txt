@@ -1,0 +1,3 @@
+-r moneyguru/requirements.txt
+objp>=1.3.2
+xibless>=0.5.2

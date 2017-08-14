@@ -1,0 +1,9 @@
+[submodule "cocoalib"]
+	path = cocoalib
+	url = https://github.com/hsoft/cocoalib.git
+[submodule "hscommon"]
+	path = hscommon
+	url = https://github.com/hsoft/hscommon.git
+[submodule "moneyguru"]
+	path = moneyguru
+	url = https://github.com/hsoft/moneyguru.git
