@@ -108,9 +108,9 @@
 	<key>CFBundleSignature</key>
 	<string>hsft</string>
     <key>CFBundleShortVersionString</key>
-    <string>{version}</string>
+    <string>{version}-1</string>
 	<key>CFBundleVersion</key>
-	<string>{version}</string>
+	<string>{version}-1</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>© Hardcoded Software, 2017</string>
 	<key>NSMainNibFile</key>
