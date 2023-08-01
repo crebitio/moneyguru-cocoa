@@ -1,0 +1,267 @@
+-------------------------------------
+Translated Report (Full Report Below)
+-------------------------------------
+
+Process:               moneyGuru [57396]
+Path:                  /Users/USER/Documents/*/moneyGuru.app/Contents/MacOS/moneyGuru
+Identifier:            com.hardcoded-software.moneyguru
+Version:               2.11.0-1 (2.11.0-1)
+Code Type:             X86-64 (Native)
+Parent Process:        launchd [1]
+User ID:               504
+
+Date/Time:             2023-08-01 14:17:51.2512 -0400
+OS Version:            macOS 12.6.8 (21G725)
+Report Version:        12
+Bridge OS Version:     3.0 (14Y910)
+Anonymous UUID:        C16BB463-9263-2C91-9EE1-A567A1C70FB4
+
+
+Time Awake Since Boot: 500000 seconds
+
+System Integrity Protection: enabled
+
+Crashed Thread:        0  Dispatch queue: com.apple.main-thread
+
+Exception Type:        EXC_BAD_ACCESS (SIGSEGV)
+Exception Codes:       KERN_INVALID_ADDRESS at 0x0000000000000010
+Exception Codes:       0x0000000000000001, 0x0000000000000010
+Exception Note:        EXC_CORPSE_NOTIFY
+
+Termination Reason:    Namespace SIGNAL, Code 11 Segmentation fault: 11
+Terminating Process:   exc handler [57396]
+
+VM Region Info: 0x10 is not in any region.  Bytes before following region: 140737486692336
+      REGION TYPE                    START - END         [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL
+      UNUSED SPACE AT START
+--->  
+      VM_ALLOCATE              7fffffe6a000-7fffffe6b000 [    4K] r-x/r-x SM=ALI  
+
+Thread 0 Crashed::  Dispatch queue: com.apple.main-thread
+0   Python                        	       0x1081c68cb PyEval_ReleaseLock + 11
+1   moneyGuru                     	       0x107006fc1 main + 337 (main.m:39)
+2   moneyGuru                     	       0x107000e54 start + 52
+
+Thread 1:
+0   libsystem_pthread.dylib       	    0x7ff8059ddf48 start_wqthread + 0
+
+Thread 2:
+0   libsystem_pthread.dylib       	    0x7ff8059ddf48 start_wqthread + 0
+
+
+Thread 0 crashed with X86 Thread State (64-bit):
+  rax: 0x00000001085332a8  rbx: 0x0000000000000000  rcx: 0x00007ff847135d68  rdx: 0x0000000000000000
+  rdi: 0x0000000000000000  rsi: 0x0000000000000000  rbp: 0x00007ff7b8effb30  rsp: 0x00007ff7b8effb30
+   r8: 0x000000000038d0cc   r9: 0xffffffff00000000  r10: 0x00007ff847135d60  r11: 0x00007ff847136050
+  r12: 0x00007ff805875400  r13: 0x0000600002bd80d0  r14: 0x00007ff81fe08342  r15: 0x00007ff847136e00
+  rip: 0x00000001081c68cb  rfl: 0x0000000000010246  cr2: 0x0000000000000010
+  
+Logical CPU:     7
+Error Code:      0x00000004 (no mapping for user data read)
+Trap Number:     14
+
+Thread 0 instruction stream:
+  8d 3d e9 9b 20 00 48 8d-35 51 9c 20 00 e8 13 20  .=.. .H.5Q. ... 
+  08 00 0f 1f 00 55 48 89-e5 5d c3 66 2e 0f 1f 84  .....UH..].f....
+  00 00 00 00 00 55 48 89-e5 48 8b 3d 8d 42 34 00  .....UH..H.=.B4.
+  48 85 ff 74 06 5d e9 6a-f8 ff ff 48 8d 3d 43 9c  H..t.].j...H.=C.
+  20 00 e8 7e f7 ff ff 66-2e 0f 1f 84 00 00 00 00   ..~...f........
+  00 0f 1f 40 00 55 48 89-e5 48 8b 15 5d 42 34 00  ...@.UH..H..]B4.
+ [48]8b 72 10 48 83 c6 60-48 8d 3d 3e 41 34 00 5d  H.r.H..`H.=>A4.]	<==
+  e9 e0 fc ff ff 55 48 89-e5 53 50 48 85 ff 74 3d  .....UH..SPH..t=
+  48 89 fb e8 1d f8 ff ff-48 8b 43 10 48 8b 40 28  H.......H.C.H.@(
+  48 8b 88 70 02 00 00 48-89 98 70 02 00 00 48 85  H..p...H..p...H.
+  c9 75 07 48 83 c4 08 5b-5d c3 48 8d 3d e7 9b 20  .u.H...[].H.=.. 
+  00 48 8d 35 f5 9b 20 00-e8 68 1f 08 00 48 8d 3d  .H.5.. ..h...H.=
+
+Binary Images:
+       0x108003000 -        0x1083e6fff org.python.python (3.11.2, (c) 2001-2023 Python Software Foundation.) <24670b23-d78a-3eaa-bca8-22faf877f190> /Library/Frameworks/Python.framework/Versions/3.11/Python
+       0x106fff000 -        0x107096fff com.hardcoded-software.moneyguru (2.11.0-1) <e75947ec-af28-31b4-8063-da3fd9dd7a7c> /Users/USER/Documents/*/moneyGuru.app/Contents/MacOS/moneyGuru
+    0x7ff8059dc000 -     0x7ff8059e7fff libsystem_pthread.dylib (*) <e5d44afd-2577-3cee-8711-9d8d426229e0> /usr/lib/system/libsystem_pthread.dylib
+               0x0 - 0xffffffffffffffff ??? (*) <00000000-0000-0000-0000-000000000000> ???
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=1.1G resident=0K(0%) swapped_out_or_unallocated=1.1G(100%)
+Writable regions: Total=606.9M written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=606.9M(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Activity Tracing                   256K        1 
+Kernel Alloc Once                    8K        1 
+MALLOC                           203.0M       38 
+MALLOC guard page                   16K        4 
+MALLOC_LARGE (reserved)            384K        1         reserved VM address space (unallocated)
+MALLOC_NANO (reserved)           384.0M        1         reserved VM address space (unallocated)
+ObjC additional data                15K        1 
+STACK GUARD                       56.0M        3 
+Stack                             9232K        3 
+VM_ALLOCATE                       9240K       12 
+__CTF                               756        1 
+__DATA                            30.8M      490 
+__DATA_CONST                      28.4M      297 
+__DATA_DIRTY                      1527K      193 
+__FONT_DATA                          4K        1 
+__LINKEDIT                       649.5M       39 
+__TEXT                           483.9M      509 
+__UNICODE                          592K        1 
+dyld private memory               1024K        1 
+mapped file                       29.0M        2 
+shared memory                       44K        4 
+===========                     =======  ======= 
+TOTAL                              1.8G     1603 
+TOTAL, minus reserved VM space     1.5G     1603 
+
+
+
+-----------
+Full Report
+-----------
+
+{"app_name":"moneyGuru","timestamp":"2023-08-01 14:17:51.00 -0400","app_version":"2.11.0-1","slice_uuid":"e75947ec-af28-31b4-8063-da3fd9dd7a7c","build_version":"2.11.0-1","platform":1,"bundleID":"com.hardcoded-software.moneyguru","share_with_app_devs":0,"is_first_party":0,"bug_type":"309","os_version":"macOS 12.6.8 (21G725)","incident_id":"7E46D7A5-A688-497A-B463-CE8274CB9A5C","name":"moneyGuru"}
+{
+  "uptime" : 500000,
+  "procLaunch" : "2023-08-01 14:17:50.9969 -0400",
+  "procRole" : "Background",
+  "version" : 2,
+  "userID" : 504,
+  "deployVersion" : 210,
+  "modelCode" : "MacBookPro13,3",
+  "procStartAbsTime" : 506315308613974,
+  "coalitionID" : 157241,
+  "osVersion" : {
+    "train" : "macOS 12.6.8",
+    "build" : "21G725",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2023-08-01 14:17:51.2512 -0400",
+  "incident" : "7E46D7A5-A688-497A-B463-CE8274CB9A5C",
+  "bug_type" : "309",
+  "pid" : 57396,
+  "procExitAbsTime" : 506315562185669,
+  "cpuType" : "X86-64",
+  "procName" : "moneyGuru",
+  "procPath" : "\/Users\/USER\/Documents\/*\/moneyGuru.app\/Contents\/MacOS\/moneyGuru",
+  "bundleInfo" : {"CFBundleShortVersionString":"2.11.0-1","CFBundleVersion":"2.11.0-1","CFBundleIdentifier":"com.hardcoded-software.moneyguru"},
+  "storeInfo" : {"deviceIdentifierForVendor":"C3965F3B-F196-5614-9230-BCD22CE529C5","thirdParty":true},
+  "parentProc" : "launchd",
+  "parentPid" : 1,
+  "coalitionName" : "com.hardcoded-software.moneyguru",
+  "crashReporterKey" : "C16BB463-9263-2C91-9EE1-A567A1C70FB4",
+  "bridgeVersion" : {"build":"14Y910","train":"3.0"},
+  "sip" : "enabled",
+  "vmRegionInfo" : "0x10 is not in any region.  Bytes before following region: 140737486692336\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      VM_ALLOCATE              7fffffe6a000-7fffffe6b000 [    4K] r-x\/r-x SM=ALI  ",
+  "isCorpse" : 1,
+  "exception" : {"codes":"0x0000000000000001, 0x0000000000000010","rawCodes":[1,16],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x0000000000000010"},
+  "termination" : {"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":57396},
+  "vmregioninfo" : "0x10 is not in any region.  Bytes before following region: 140737486692336\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      VM_ALLOCATE              7fffffe6a000-7fffffe6b000 [    4K] r-x\/r-x SM=ALI  ",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"triggered":true,"id":3723468,"instructionState":{"instructionStream":{"bytes":[141,61,233,155,32,0,72,141,53,81,156,32,0,232,19,32,8,0,15,31,0,85,72,137,229,93,195,102,46,15,31,132,0,0,0,0,0,85,72,137,229,72,139,61,141,66,52,0,72,133,255,116,6,93,233,106,248,255,255,72,141,61,67,156,32,0,232,126,247,255,255,102,46,15,31,132,0,0,0,0,0,15,31,64,0,85,72,137,229,72,139,21,93,66,52,0,72,139,114,16,72,131,198,96,72,141,61,62,65,52,0,93,233,224,252,255,255,85,72,137,229,83,80,72,133,255,116,61,72,137,251,232,29,248,255,255,72,139,67,16,72,139,64,40,72,139,136,112,2,0,0,72,137,152,112,2,0,0,72,133,201,117,7,72,131,196,8,91,93,195,72,141,61,231,155,32,0,72,141,53,245,155,32,0,232,104,31,8,0,72,141,61],"offset":96}},"threadState":{"r13":{"value":105553162240208},"rax":{"value":4434637480,"symbolLocation":166384,"symbol":"_PyRuntime"},"rflags":{"value":66118},"cpu":{"value":7},"r14":{"value":140703663424322},"rsi":{"value":0},"r8":{"value":3723468},"cr2":{"value":16},"rdx":{"value":0},"r10":{"value":140704321068384,"symbolLocation":24,"symbol":"filelist_lock"},"r9":{"value":18446744069414584320},"r15":{"value":140704321072640,"symbolLocation":0,"symbol":"usual"},"rbx":{"value":0},"trap":{"value":14,"description":"(no mapping for user data read)"},"err":{"value":4},"r11":{"value":140704321069136,"symbolLocation":32,"symbol":"usual_extra"},"rip":{"value":4431046859,"matchesCrashFrame":1},"rbp":{"value":140701936384816},"rsp":{"value":140701936384816},"r12":{"value":140703221371904,"symbolLocation":0,"symbol":"objc_msgSend"},"rcx":{"value":140704321068392,"symbolLocation":32,"symbol":"filelist_lock"},"flavor":"x86_THREAD_STATE","rdi":{"value":0}},"queue":"com.apple.main-thread","frames":[{"imageOffset":1849547,"symbol":"PyEval_ReleaseLock","symbolLocation":11,"imageIndex":0},{"imageOffset":32705,"sourceLine":39,"sourceFile":"main.m","symbol":"main","imageIndex":1,"symbolLocation":337},{"imageOffset":7764,"symbol":"start","symbolLocation":52,"imageIndex":1}]},{"id":3723485,"frames":[{"imageOffset":8008,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":2}]},{"id":3723486,"frames":[{"imageOffset":8008,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":2}]}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4429197312,
+    "CFBundleShortVersionString" : "3.11.2, (c) 2001-2023 Python Software Foundation.",
+    "CFBundleIdentifier" : "org.python.python",
+    "size" : 4079616,
+    "uuid" : "24670b23-d78a-3eaa-bca8-22faf877f190",
+    "path" : "\/Library\/Frameworks\/Python.framework\/Versions\/3.11\/Python",
+    "name" : "Python",
+    "CFBundleVersion" : "3.11.2"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4412403712,
+    "CFBundleShortVersionString" : "2.11.0-1",
+    "CFBundleIdentifier" : "com.hardcoded-software.moneyguru",
+    "size" : 622592,
+    "uuid" : "e75947ec-af28-31b4-8063-da3fd9dd7a7c",
+    "path" : "\/Users\/USER\/Documents\/*\/moneyGuru.app\/Contents\/MacOS\/moneyGuru",
+    "name" : "moneyGuru",
+    "CFBundleVersion" : "2.11.0-1"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703222841344,
+    "size" : 49152,
+    "uuid" : "e5d44afd-2577-3cee-8711-9d8d426229e0",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  }
+],
+  "sharedCache" : {
+  "base" : 140703219585024,
+  "size" : 19331678208,
+  "uuid" : "a503f8ca-2ac1-3e4c-bcf4-19655d4614cb"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=1.1G resident=0K(0%) swapped_out_or_unallocated=1.1G(100%)\nWritable regions: Total=606.9M written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=606.9M(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nActivity Tracing                   256K        1 \nKernel Alloc Once                    8K        1 \nMALLOC                           203.0M       38 \nMALLOC guard page                   16K        4 \nMALLOC_LARGE (reserved)            384K        1         reserved VM address space (unallocated)\nMALLOC_NANO (reserved)           384.0M        1         reserved VM address space (unallocated)\nObjC additional data                15K        1 \nSTACK GUARD                       56.0M        3 \nStack                             9232K        3 \nVM_ALLOCATE                       9240K       12 \n__CTF                               756        1 \n__DATA                            30.8M      490 \n__DATA_CONST                      28.4M      297 \n__DATA_DIRTY                      1527K      193 \n__FONT_DATA                          4K        1 \n__LINKEDIT                       649.5M       39 \n__TEXT                           483.9M      509 \n__UNICODE                          592K        1 \ndyld private memory               1024K        1 \nmapped file                       29.0M        2 \nshared memory                       44K        4 \n===========                     =======  ======= \nTOTAL                              1.8G     1603 \nTOTAL, minus reserved VM space     1.5G     1603 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "queue" : "com.apple.main-thread"
+  }
+},
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "5f72dc58705eff005a46b3a9",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000015
+    },
+    {
+      "rolloutId" : "61301e3a61217b3110231469",
+      "factorPackIds" : {
+        "SIRI_FIND_MY_CONFIGURATION_FILES" : "6348493aa52bb16adc4e4d06"
+      },
+      "deploymentId" : 240000023
+    }
+  ],
+  "experiments" : [
+
+  ]
+}
+}
+
+Model: MacBookPro13,3, BootROM 512.0.0.0.0, 4 processors, Quad-Core Intel Core i7, 2.6 GHz, 16 GB, SMC 2.38f12
+Graphics: Intel HD Graphics 530, Intel HD Graphics 530, Built-In
+Graphics: Radeon Pro 450, AMD Radeon Pro 450, PCIe, 2 GB
+Display: Color LCD, 2880 x 1800 Retina, Main, MirrorOff, Online
+Display: TYPE-C, 1344 x 840, MirrorOff, Online
+Display: Cinema HD, 1920 x 1200 (WUXGA - Widescreen Ultra eXtended Graphics Array), MirrorOff, Online
+Display: TYPE-C, 1344 x 840, MirrorOff, Online
+Memory Module: BANK 0/DIMM0, 8 GB, LPDDR3, 2133 MHz, 0x80CE, 0x4B3445424533303445422D45474347202020
+Memory Module: BANK 1/DIMM0, 8 GB, LPDDR3, 2133 MHz, 0x80CE, 0x4B3445424533303445422D45474347202020
+AirPort: spairport_wireless_card_type_wifi (0x14E4, 0x15A), Broadcom BCM43xx 1.0 (7.77.111.1 AirPortDriverBrcmNIC-1710.4)
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports
+Network Service: USB 10/100 LAN, Ethernet, en10
+USB Device: USB30Bus
+USB Device: USB 2.0 BILLBOARD
+USB Device: Apple T1 Controller
+USB Device: USB 10/100 LAN
+Thunderbolt Bus: MacBook Pro, Apple Inc., 41.5
+Thunderbolt Bus: MacBook Pro, Apple Inc., 41.5
